@@ -22,10 +22,15 @@
 
     if (tabs && content.length) {
       tabs.addEventListener('click', (e) => {
-        const name = e.target.dataset.name;
+        // locate the <li> tag
+        let target = e.target;
+        while(target.tagName !== 'LI' && target.tagName !== 'BODY'){
+          target = target.parentElement;
+        }
+        const name = target.dataset.name;
         if (name) {
           changeTab(name);
-          location.hash = '#' + e.target.dataset.name;
+          location.hash = '#' + target.dataset.name;
         }
       });
     }
@@ -36,9 +41,14 @@
     const container = document.querySelector('.markdown-body');
     if (container) {
       container.addEventListener('click', function(e){
-        if (e.target.tagName === 'A' && e.target.host === location.host && e.target.hash) {
+        // locate the <a> tag
+        let target = e.target;
+        while(target.tagName !== 'A' && target.tagName !== 'BODY'){
+          target = target.parentElement;
+        }
+        if (target.host === location.host && target.hash) {
           e.preventDefault()
-          const elem = document.querySelector(e.target.hash);
+          const elem = document.querySelector(target.hash);
           if (elem) {scrollTo(document.body, elem.offsetTop - 80, 300);}
         }
       });

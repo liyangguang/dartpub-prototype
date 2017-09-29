@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
   </head>
-  <body id="package">
+  <body>
       <header class="site-header">
         <h1 class="_visuallyhidden">Dart pub</h1>
         <button class="hamburger"></button>
@@ -31,7 +31,7 @@
               <button class="button">commands</button>
               <div class="sub-nav">
                 <div class="title">pub commands</div>
-                <ul>
+                <ul class="command-list">
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-build.html">pub build</a></li>
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-cache.html">pub cache</a></li>
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-deps.html">pub deps</a></li>
@@ -66,16 +66,18 @@
       </div>
       <div class="package-container">
         <div class="main tabs-content">
-            <div class="score-box"><span class="number -good">80</span><span class="text">Good</span>
-            </div>
           <ul class="package-tabs js-tabs">
-            <li class="tab -active" data-name="readme">README.md</li>
-            <li class="tab" data-name="changelog">CHANGELOG.md</li>
+            <li class="tab -active" data-name="readme">ReadMe</li>
+            <li class="tab" data-name="changelog">Changelog</li>
             <li class="tab" data-name="installing">Installing</li>
             <li class="tab" data-name="versions">Versions</li>
+            <li class="tab" data-name="score">
+                <div class="score-box"><span class="number -good">80</span><span class="text">Good</span>
+                </div>
+            </li>
           </ul>
           <section class="content js-content -active markdown-body" data-name="readme">
-            <h1>Dart Unicode Helper</h1><a href="#anchor">test anchor</a>
+            <h1>Dart Unicode Helper</h1><a href="#anchor"><strong>test anchor</strong></a>
             <p>Copyright (C) 2013 Edwin Bühler. All Rights Reserved.</p>
             <p>Author: Edwin Bühler <fulnir@gmail.com></p>
             <p>This library is a workaround for non ascii characters.</p>
@@ -139,14 +141,88 @@ unicode_helper: "^0.2.0"</pre>
             <p>Now in your Dart code, you can use:</p>
             <pre>import 'package:unicode_helper/unicode_helper.dart';</pre>
           </section>
-          <section class="content js-content markdown-body" data-name="versions">
-            <h1>versions</h1>
+          <section class="content js-content markdown-body" data-name="versions"><!-- copied from your demo, just added a class on <table> -->
+            <table class="version-table">
+              <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Uploaded</th>
+                  <th class="documentation" width="60">Documentation</th>
+                  <th class="archive" width="60">Archive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>0.14.0</th>
+                  <td>Sep 2, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.14.0/" title="Go to the documentation of intl 0.14.0"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.14.0"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.14.0.tar.gz" title="Download intl 0.14.0 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.14.0 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.13.1</th>
+                  <td>Aug 31, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.13.1/" title="Go to the documentation of intl 0.13.1"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.13.1"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.13.1.tar.gz" title="Download intl 0.13.1 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.13.1 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.13.0</th>
+                  <td>May 20, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.13.0/" title="Go to the documentation of intl 0.13.0"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.13.0"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.13.0.tar.gz" title="Download intl 0.13.0 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.13.0 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.7+1</th>
+                  <td>Apr 11, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.7%2B1/" title="Go to the documentation of intl 0.12.7+1"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.7+1"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.7+1.tar.gz" title="Download intl 0.12.7+1 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.7+1 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.7</th>
+                  <td>Feb 10, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.7/" title="Go to the documentation of intl 0.12.7"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.7"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.7.tar.gz" title="Download intl 0.12.7 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.7 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.6</th>
+                  <td>Jan 15, 2016</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.6/" title="Go to the documentation of intl 0.12.6"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.6"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.6.tar.gz" title="Download intl 0.12.6 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.6 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.5</th>
+                  <td>Dec 17, 2015</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.5/" title="Go to the documentation of intl 0.12.5"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.5"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.5.tar.gz" title="Download intl 0.12.5 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.5 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.4+3</th>
+                  <td>Dec 10, 2015</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.4%2B3/" title="Go to the documentation of intl 0.12.4+3"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.4+3"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.4+3.tar.gz" title="Download intl 0.12.4+3 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.4+3 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.4+2</th>
+                  <td>Aug 19, 2015</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.4%2B2/" title="Go to the documentation of intl 0.12.4+2"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.4+2"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.4+2.tar.gz" title="Download intl 0.12.4+2 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.4+2 archive"></a></td>
+                </tr>
+                <tr>
+                  <th>0.12.4+1</th>
+                  <td>Jul 23, 2015</td>
+                  <td class="documentation"><a href="http://www.dartdocs.org/documentation/intl/0.12.4%2B1/" title="Go to the documentation of intl 0.12.4+1"><img src="/img/ic_drive_document_black_24dp.svg" alt="Go to the documentation of intl 0.12.4+1"></a></td>
+                  <td class="archive"><a href="https://storage.googleapis.com/dartlang-pub-dev--pub-packages/packages/intl-0.12.4+1.tar.gz" title="Download intl 0.12.4+1 archive"><img src="/img/ic_get_app_black_24dp.svg" alt="Download intl 0.12.4+1 archive"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="content js-content markdown-body" data-name="score">
+            <p>(some content for the score tab)</p>
           </section>
         </div>
         <aside class="sidebar sidebar-content">
           <p class="mobile-os"><span> <img src="./img/ic_android.svg" alt="">Android</span><span><img src="./img/ic_ios.svg" alt="">iOS</span></p>
           <h3 class="title">About</h3>
-          <p>A utility for unicode</p>
+          <p>A utility for unicode slkdfj slkdfj alfj slakfj salkfj salkfj salkfjsa lkfjl fkjsfl kasdjf lakjf </p>
           <h3 class="title">Author</h3>
           <p>David Notik</p><a class="link" href="mailto:dave@dave.com">dave@dave.com</a>
           <h3 class="title">Site</h3><a class="link" href="">github.com/dave/unicode</a>

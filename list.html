@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
   </head>
-  <body id="list">
+  <body>
       <header class="site-header">
         <h1 class="_visuallyhidden">Dart pub</h1>
         <button class="hamburger"></button>
@@ -31,7 +31,7 @@
               <button class="button">commands</button>
               <div class="sub-nav">
                 <div class="title">pub commands</div>
-                <ul>
+                <ul class="command-list">
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-build.html">pub build</a></li>
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-cache.html">pub cache</a></li>
                   <li><a class="command" target="_blank" href="https://www.dartlang.org/tools/pub/cmd/pub-deps.html">pub deps</a></li>
@@ -77,7 +77,7 @@
       </div>
       <section class="tab-content js-content -active" data-name="all">
         <p class="package-count"><span>1234</span> results for <span>unicode</span></p>
-          <ul>
+          <ul class="package-list">
               <li class="list-item -full">
                   <div class="score-box"><span class="number -solid">95</span><span class="text">Solid</span>
                   </div>
@@ -159,10 +159,17 @@
                 </p>
               </li>
           </ul>
+        <ul class="pagination">
+          <li class="-disabled"><a>&lt;</a></li>
+          <li class="-active"><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>&gt;</a></li>
+        </ul>
       </section>
       <section class="tab-content js-content" data-name="flutter">
         <p class="package-count"><span>1234</span> results for <span>unicode in flutter</span></p>
-          <ul>
+          <ul class="package-list">
               <li class="list-item -full">
                   <div class="score-box"><span class="number -solid">95</span><span class="text">Solid</span>
                   </div>
@@ -244,10 +251,17 @@
                 </p>
               </li>
           </ul>
+        <ul class="pagination">
+          <li class="-disabled"><a>&lt;</a></li>
+          <li class="-active"><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>&gt;</a></li>
+        </ul>
       </section>
       <section class="tab-content js-content" data-name="web">
         <p class="package-count"><span>1234</span> results for <span>unicode in web</span></p>
-          <ul>
+          <ul class="package-list">
               <li class="list-item -full">
                   <div class="score-box"><span class="number -solid">95</span><span class="text">Solid</span>
                   </div>
@@ -329,10 +343,17 @@
                 </p>
               </li>
           </ul>
+        <ul class="pagination">
+          <li class="-disabled"><a>&lt;</a></li>
+          <li class="-active"><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>&gt;</a></li>
+        </ul>
       </section>
       <section class="tab-content js-content" data-name="server">
         <p class="package-count"><span>1234</span> results for <span>unicode in server</span></p>
-          <ul>
+          <ul class="package-list">
               <li class="list-item -full">
                   <div class="score-box"><span class="number -solid">95</span><span class="text">Solid</span>
                   </div>
@@ -414,6 +435,13 @@
                 </p>
               </li>
           </ul>
+        <ul class="pagination">
+          <li class="-disabled"><a>&lt;</a></li>
+          <li class="-active"><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>&gt;</a></li>
+        </ul>
       </section>
     </main>
     <footer class="site-footer"><a class="link" href="#">Dart Language</a><a class="link" href="#">Terms of Service</a><a class="link" href="#">Privacy Policy</a></footer>
